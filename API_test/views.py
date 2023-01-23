@@ -34,7 +34,12 @@ class gamesListView(View):
 
   def post(self, request):  # POST method: Adding objects
     datos_recibidos = json.loads(request.body)
-    games.objects.create(name=datos_recibidos['name'], category=datos_recibidos['category'], website=datos_recibidos['website'], company=datos_recibidos['company']) # This is how we save the information sent by user/dev
+    games.objects.create(
+        name=datos_recibidos['name'],
+        category=datos_recibidos['category'],
+        website=datos_recibidos['website'],
+        company=datos_recibidos['company']
+      ) # This is how we save the information sent by user/dev
     datos = {'message': 'Saved'}
     return JsonResponse(datos)
 
