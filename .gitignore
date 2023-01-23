@@ -1,0 +1,7 @@
+#Frontend files
+/frontend
+
+#Backend files
+/venv
+.db.sqlite3
+.jupyter_notebook.ipynb
